@@ -36,7 +36,7 @@ let proxyhosts = [];
 let proxyhostsURL = '';
 let RproxyIP = 'false';
 const httpPorts = ["8080", "8880", "2052", "2082", "2086", "2095"];
-let httpsPorts = ["2053", "2083", "2087", "2096", "8443"];
+let httpsPorts = ["2053", "2083", "2087", "", "8443"];
 let 有效时间 = 7;
 let 更新时间 = 3;
 let userIDLow;
@@ -1296,7 +1296,7 @@ async function 生成配置信息(userID, hostName, sub, UA, RproxyIP, _url, fak
 
 				return randomIP.join('.');
 			}
-			addresses = addresses.concat('warps.dynv6.net:443#CFnat');
+			addresses = addresses.concat('abs.mohic.lol:443#CFnat');
 			let counter = 1;
 			if (hostName.includes("worker") || hostName.includes("notls")) {
 				const randomPorts = httpPorts.concat('80');
